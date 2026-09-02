@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-cream: #FFF7EB;
+    --color-stone: #A8A492;
+    --color-terracotta: #A56F63;
+    --color-dark: #2B2625;
+    --color-dark-subtle: #4A4443;
+    --card-bg: #FFFFFF;
+  }
+
+  body {
+    background-color: var(--bg-cream);
+    color: var(--color-dark);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+    color: var(--color-dark);
+  }
+}
+
+/* Custom Minimalist Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFF7EB;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #A8A492;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A56F63;
+}
+
+/* Print Styles for Student Membership Slip */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-card {
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: none !important;
+    padding: 20px !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+}
